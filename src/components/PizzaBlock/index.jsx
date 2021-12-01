@@ -10,13 +10,26 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
 
   const [activeType, setActiveType] = React.useState(types[0]);
   const [activeSize, setActiveSize] = React.useState(0);
+  const [activePrice, setActivePrice] = React.useState(price);
 
   const onSelectType = (index) => {
     setActiveType(index);
   };
 
-  const onSelectSize = (index) => {
+  const onSelectSize = (index, size) => {
     setActiveSize(index);
+    console.log(typeof activePrice)
+
+    switch (size) {
+      case 26:
+        return setActivePrice(price);
+      case 30:
+        return setActivePrice(Math.round(price * 1.2));
+      case 40:
+        return setActivePrice(price * 1.5);
+      default:
+        return price;
+    }
   };
 
   const onAddPizza = () => {
@@ -24,10 +37,12 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
       id,
       name,
       imageUrl,
-      price,
+      price: activePrice,
       size: availableSizes[activeSize],
       type: availableTypes[activeType],
     };
+
+    console.log(obj)
     onClickAddPizza(obj);
   };
 
@@ -53,7 +68,7 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
           {availableSizes.map((size, index) => (
             <li
               key={size}
-              onClick={() => onSelectSize(index)}
+              onClick={() => onSelectSize(index, size)}
               className={classNames({
                 active: activeSize === index,
                 disabled: !sizes.includes(size),
@@ -64,7 +79,7 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
         </ul>
       </div>
       <div className="pizza-block__bottom">
-        <div className="pizza-block__price"><span className="price-from">from </span>{price} &euro;</div>
+        <div className="pizza-block__price">{activePrice} &euro;</div>
         <Button onClick={onAddPizza} className="button--add" outline>
           <span>Add to the Cart</span>
           {addedCount && <i>{addedCount}</i>}
