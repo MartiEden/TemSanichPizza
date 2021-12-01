@@ -133,14 +133,15 @@ function Cart() {
           <div className="cart__bottom">
             <div className="cart__bottom-details">
               <span>
-              Pizzas count: <b>{totalCount}</b>
+                Pizzas count: <b>{totalCount}</b>
               </span>
               <span>
                 Total Price: <b>{totalPrice} &euro;</b>
               </span>
             </div>
             <div className="cart__bottom-buttons">
-              <a href="/" className="button button--outline button--add go-back-btn">
+              
+              <Link to="/" className="button button--outline button--add go-back-btn">
                 <svg
                   width="8"
                   height="14"
@@ -155,10 +156,10 @@ function Cart() {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <Link to="/">
-                  <span>Back</span>
-                </Link>
-              </a>
+
+                <span>Back</span>
+              </Link>
+
               <Button onClick={onClickOrder} className="pay-btn">
                 <span>Confirm</span>
               </Button>

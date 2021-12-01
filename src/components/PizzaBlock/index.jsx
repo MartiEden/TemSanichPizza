@@ -18,7 +18,6 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
 
   const onSelectSize = (index, size) => {
     setActiveSize(index);
-    console.log(typeof activePrice)
 
     switch (size) {
       case 26:

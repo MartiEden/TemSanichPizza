@@ -365,7 +365,7 @@ body {
 
         span {
           color: darken($color: $gray-line, $amount: 20);
-          font-weight: 600;
+          font: normal 600 20px "Proxima Nova", Roboto, system-ui, Tahoma, sans-serif;
         }
 
         &:hover {
