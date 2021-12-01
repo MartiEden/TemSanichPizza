@@ -25,9 +25,9 @@ const CartItem = ({ id, name, type, size, totalPrice, totalCount, onRemove, onMi
       </div>
       <div className="cart__item-info">
         <h3>{name}</h3>
-        <p>
+        {/* <p>
           {type}, {size} cm
-        </p>
+        </p> */}
       </div>
       <div className="cart__item-count">
         <div

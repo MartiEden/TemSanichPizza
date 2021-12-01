@@ -160,7 +160,7 @@ function Cart() {
                 </Link>
               </a>
               <Button onClick={onClickOrder} className="pay-btn">
-                <span>Confirm order</span>
+                <span>Confirm</span>
               </Button>
             </div>
           </div>

@@ -41,8 +41,6 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
       size: availableSizes[activeSize],
       type: availableTypes[activeType],
     };
-
-    console.log(obj)
     onClickAddPizza(obj);
   };
 
@@ -81,7 +79,7 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">{activePrice} &euro;</div>
         <Button onClick={onAddPizza} className="button--add" outline>
-          <span>Add to the Cart</span>
+          <span>Add to Cart</span>
           {addedCount && <i>{addedCount}</i>}
         </Button>
       </div>
