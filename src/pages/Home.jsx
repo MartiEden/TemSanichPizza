@@ -24,6 +24,8 @@ function Home() {
     dispatch(fetchPizzas(sortBy, category));
   }, [category, sortBy]);
 
+  console.log(category)
+
   const onSelectCategory = React.useCallback((index) => {
     dispatch(setCategory(index));
   }, []);
@@ -53,7 +55,7 @@ function Home() {
           onClickSortType={onSelectSortType}
         />
       </div>
-      <h2 className="content__title">All variants</h2>
+      <h2 className="content__title">{category !== null ? categoryNames[category] : 'All variants'}</h2>
       <div className="content__items">
         {isLoaded
           ? items.map((obj) => (
