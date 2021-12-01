@@ -1,0 +1,33 @@
+@import 'variables';
+
+.header {
+  border-bottom: 1px solid $gray-line;
+
+  @media (max-width: 768px) {
+    border: none;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__cart {
+      margin-top: 30px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+
+    img {
+      width: 100%;
+    }
+  }
+}
