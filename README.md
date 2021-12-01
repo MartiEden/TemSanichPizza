@@ -1,4 +1,4 @@
-E-commerce- **TemSanich PIZZA e-commerce**
+**TemSanich PIZZA e-commerce**
 
 **Stack:**
 
