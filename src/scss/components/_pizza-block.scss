@@ -20,6 +20,10 @@
 
   &__image {
     width: 260px;
+
+    @media (max-width: 768px) {
+      margin-left: 16px;
+    }
   }
 
   &__title {
