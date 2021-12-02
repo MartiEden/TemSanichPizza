@@ -24,8 +24,6 @@ function Home() {
     dispatch(fetchPizzas(sortBy, category));
   }, [category, sortBy]);
 
-  console.log(category)
-
   const onSelectCategory = React.useCallback((index) => {
     dispatch(setCategory(index));
   }, []);

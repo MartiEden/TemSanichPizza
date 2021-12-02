@@ -17,7 +17,12 @@
     }
   }
 
+  &__cart {
+    display: block;
+  }
+
   @media (max-width: 768px) {
+
     &__cart {
       margin-top: 30px;
     }

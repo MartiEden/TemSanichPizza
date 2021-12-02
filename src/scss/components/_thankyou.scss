@@ -1,0 +1,18 @@
+@import "variables";
+
+.thankyou-page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__img {
+        height: auto;
+        margin-bottom: 10%;
+        width: 40%;
+    }
+
+    &__button {
+        @include blackButton()
+    }
+}

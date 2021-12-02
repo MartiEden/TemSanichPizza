@@ -1,5 +1,6 @@
 @import "fonts";
 @import "variables";
+@import "mixins";
 @import "libs/normalize";
 @import "components/all";
 
@@ -441,11 +442,7 @@ body {
     }
 
     .button--black {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 0 auto;
-      padding: 12px 0 14px;
-      width: 230px;
+     @include blackButton()
     }
   }
 }
