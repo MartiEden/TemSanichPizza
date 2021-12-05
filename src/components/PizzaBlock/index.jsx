@@ -78,8 +78,9 @@ function PizzaBlock({ id, name, imageUrl, price, types, sizes, onClickAddPizza, 
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">{activePrice} &euro;</div>
         <Button onClick={onAddPizza} className="button--add" outline>
-          <span>Add to Cart</span>
+          <span>Add to Cart
           {addedCount && <i>{addedCount}</i>}
+          </span>
         </Button>
       </div>
     </div>

@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .pizza-block {
   margin-bottom: 65px;
@@ -10,7 +10,6 @@
   }
 
   @media (max-width: 768px) {
-
     &:not(:last-of-type) {
       border-bottom: 1px solid #efefef;
       margin-bottom: 25px;
@@ -76,12 +75,16 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
+    @media screen and (max-width: 1380px) {
+      justify-content: flex-end;
+    }
   }
 
   &__price {
     font: normal 600 22px/27px "Proxima Nova", Roboto, system-ui, Tahoma, sans-serif;
     letter-spacing: 0.015em;
-    margin-right: 10px;
+    margin-right: 10%;
     white-space: nowrap;
 
     .price-from {

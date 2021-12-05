@@ -96,7 +96,6 @@
   }
 
   &--add {
-    position: relative;
     width: 80%;
 
     svg {
@@ -106,6 +105,7 @@
     span {
       font-size: 16px;
       font-weight: 600;
+      position: relative;
     }
 
     &:hover {
@@ -125,11 +125,15 @@
       height: 22px;
       justify-content: center;
       position: absolute;
-      right: 30px;
+      right: -30px;
       text-align: center;
       top: 50%;
       transform: translateY(-50%);
       width: 22px;
+    }
+
+    @media screen and (max-width: 1380px) {
+      width: 60%;
     }
   }
 
