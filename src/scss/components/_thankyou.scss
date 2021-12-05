@@ -2,21 +2,46 @@
 
 .thankyou-page {
     align-items: center;
+    bottom: 0;
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: center;
+    left: 0;
+    position: fixed;
+    transition: opacity 0.3s ease-in-out;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 
     &__img {
         height: auto;
-        margin-bottom: 10%;
-        width: 40%;
+        margin-bottom: 5%;
+        width: 30%;
     }
 
     &__button {
         @include blackButton()
     }
 
+    &__background {
+        background-color: #000000;
+        bottom: 0;
+        left: 0;
+        opacity: .8;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
     &.hidden {
-        display: none;
+        opacity: 0;
+    }
+
+    &.visible {
+        opacity: 1;
+        z-index: 10;
     }
 }

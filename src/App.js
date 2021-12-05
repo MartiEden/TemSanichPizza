@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header, ThankYouPage } from './components';
+import { Header } from './components';
 import { Home, Cart } from './pages';
 import { Route } from 'react-router-dom';
 

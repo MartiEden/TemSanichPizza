@@ -34,9 +34,16 @@ function Cart() {
     dispatch(minusCartItem(id));
   };
 
-  const onClickOrder = () => {
-    // dispatch(clearCart())
+  const thankYouModal = () => {
+    const page = document.querySelector('.thankyou-page');
+    page.classList.remove('hidden');
+    page.classList.add('visible');
+
     console.log('Your Order', items);
+  }
+
+  const onBackToMain = () => {
+    dispatch(clearCart())
   };
 
   return (
@@ -141,7 +148,7 @@ function Cart() {
               </span>
             </div>
             <div className="cart__bottom-buttons">
-              
+
               <Link to="/" className="button button--outline button--add go-back-btn">
                 <svg
                   width="8"
@@ -161,12 +168,12 @@ function Cart() {
                 <span>Back</span>
               </Link>
 
-              <Button to="/thankyou" onClick={onClickOrder} className="pay-btn">
+              <Button onClick={thankYouModal} className="pay-btn">
                 <span>Confirm</span>
               </Button>
             </div>
           </div>
-          <ThankYouPage />
+          <ThankYouPage onBackToMain={onBackToMain}/>
         </div>
       ) : (
         <div className="cart cart--empty">
