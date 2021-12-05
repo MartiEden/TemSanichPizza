@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ThankYouPage = () => {
 
     return (
-        <div className="thankyou-page">
+        <div className="thankyou-page hidden">
             <img className="thankyou-page__img" src={Image} alt="thank you image" />
 
             <Link to="/" className="thankyou-page__button button button--black">

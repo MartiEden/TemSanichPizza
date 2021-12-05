@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import cartEmptyImage from '../assets/img/empty-cart.png';
-import { CartItem, Button } from '../components';
+import { CartItem, Button, ThankYouPage } from '../components';
 import { clearCart, removeCartItem, plusCartItem, minusCartItem } from '../redux/actions/cart';
 
 function Cart() {
@@ -35,7 +35,7 @@ function Cart() {
   };
 
   const onClickOrder = () => {
-    dispatch(clearCart())
+    // dispatch(clearCart())
     console.log('Your Order', items);
   };
 
@@ -161,11 +161,12 @@ function Cart() {
                 <span>Back</span>
               </Link>
 
-              <Link to="/thankyou" onClick={onClickOrder} className="button pay-btn">
+              <Button to="/thankyou" onClick={onClickOrder} className="pay-btn">
                 <span>Confirm</span>
-              </Link>
+              </Button>
             </div>
           </div>
+          <ThankYouPage />
         </div>
       ) : (
         <div className="cart cart--empty">

@@ -12,7 +12,6 @@ function App() {
       <div className="content">
         <Route path="/" component={Home} exact />
         <Route path="/cart" component={Cart} exact />
-        <Route path="/thankyou" component={ThankYouPage} exact />
       </div>
     </div>
   );

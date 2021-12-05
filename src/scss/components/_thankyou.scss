@@ -15,4 +15,8 @@
     &__button {
         @include blackButton()
     }
+
+    &.hidden {
+        display: none;
+    }
 }
