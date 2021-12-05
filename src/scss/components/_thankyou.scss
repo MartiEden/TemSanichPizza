@@ -15,21 +15,31 @@
     width: 100%;
     z-index: -1;
 
-    &__img {
-        height: auto;
-        margin-bottom: 5%;
-        width: 30%;
-    }
+    &__content {
+        align-items: center;
+        background: #ffffff;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0 60px 0;
+        max-width: 90%;
 
-    &__button {
-        @include blackButton()
+            &--img {
+                height: auto;
+                margin-bottom: 5%;
+                width: 50%;
+            }
+
+            &--button {
+                @include blackButton();
+            }
     }
 
     &__background {
         background-color: #000000;
         bottom: 0;
         left: 0;
-        opacity: .8;
+        opacity: 0.8;
         position: absolute;
         right: 0;
         top: 0;
