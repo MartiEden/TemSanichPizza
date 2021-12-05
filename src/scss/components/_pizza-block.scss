@@ -31,6 +31,7 @@
     font-weight: 900;
     letter-spacing: 1%;
     margin-bottom: 20px;
+    min-height: 50px;
   }
 
   &__selector {
@@ -80,6 +81,8 @@
   &__price {
     font: normal 600 22px/27px "Proxima Nova", Roboto, system-ui, Tahoma, sans-serif;
     letter-spacing: 0.015em;
+    margin-right: 10px;
+    white-space: nowrap;
 
     .price-from {
       color: $grey2;
