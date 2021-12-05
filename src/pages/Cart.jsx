@@ -35,7 +35,8 @@ function Cart() {
   };
 
   const onClickOrder = () => {
-    console.log('ВАШ ЗАКАЗ', items);
+    dispatch(clearCart())
+    console.log('Your Order', items);
   };
 
   return (
@@ -160,9 +161,9 @@ function Cart() {
                 <span>Back</span>
               </Link>
 
-              <Button onClick={onClickOrder} className="pay-btn">
+              <Link to="/thankyou" onClick={onClickOrder} className="button pay-btn">
                 <span>Confirm</span>
-              </Button>
+              </Link>
             </div>
           </div>
         </div>
