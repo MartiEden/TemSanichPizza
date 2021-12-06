@@ -28,7 +28,7 @@ body {
 .content {
   padding: 40px 0;
 
-  @media (max-width: 500px){
+  @media (max-width: 500px) {
     padding-top: 430px;
   }
 
@@ -368,8 +368,11 @@ body {
 
       span {
         font-size: 22px;
+        margin-bottom: 10px;
 
         &:last-of-type {
+          margin-bottom: 0;
+
           b {
             color: $golden;
           }
@@ -462,7 +465,7 @@ body {
     }
 
     .button--black {
-     @include blackButton()
+      @include blackButton();
     }
   }
 }
