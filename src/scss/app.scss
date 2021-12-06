@@ -28,6 +28,10 @@ body {
 .content {
   padding: 40px 0;
 
+  @media (max-width: 500px){
+    padding-top: 430px;
+  }
+
   &__title {
     margin: 35px 0;
 

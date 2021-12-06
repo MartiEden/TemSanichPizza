@@ -1,10 +1,19 @@
-@import 'variables';
+@import "variables";
 
 .header {
   border-bottom: 1px solid $gray-line;
 
   @media (max-width: 768px) {
     border: none;
+  }
+
+  @media (max-width: 500px) {
+    background: #ffffff;
+    border: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 8;
   }
 
   .container {
@@ -19,12 +28,13 @@
 
   &__cart {
     display: block;
-  }
 
-  @media (max-width: 768px) {
-
-    &__cart {
+    @media (max-width: 768px) {
       margin-top: 30px;
+    }
+
+    @media (max-width: 500px) {
+      width: 100%;
     }
   }
 
