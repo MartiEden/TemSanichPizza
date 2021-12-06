@@ -236,11 +236,22 @@ body {
       }
     }
 
+    &-bottom-block {
+      display: flex;
+      justify-content: space-between;
+      width: 46%;
+
+      @media (max-width: 768px) {
+        order: 3;
+        width: 100%;
+      }
+    }
+
     &-count {
       align-items: center;
       display: flex;
       justify-content: space-between;
-      width: 13%;
+      width: 35%;
 
       b {
         font-size: 22px;
@@ -249,7 +260,7 @@ body {
       @media (max-width: 768px) {
         margin: 10px 0;
         order: 4;
-        width: 130px;
+        width: 25%;
 
         .button {
           height: 40px;
@@ -264,6 +275,10 @@ body {
         b {
           font-size: 26px;
         }
+      }
+
+      @media (max-width: 500px) {
+        width: 50%;
       }
 
       &-minus {
@@ -348,6 +363,7 @@ body {
 
     &-details {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       span {
