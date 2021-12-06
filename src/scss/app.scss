@@ -193,7 +193,7 @@ body {
         width: 80px;
 
         @media (max-width: 768px) {
-          height: 60%;
+          height: auto;
           width: 60%;
         }
       }

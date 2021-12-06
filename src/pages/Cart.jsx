@@ -6,7 +6,7 @@ import cartEmptyImage from '../assets/img/empty-cart.png';
 import { CartItem, Button, ThankYouPage } from '../components';
 import { clearCart, removeCartItem, plusCartItem, minusCartItem } from '../redux/actions/cart';
 
-function Cart() {
+const Cart = () => {
   const dispatch = useDispatch();
   const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart);
 
@@ -128,6 +128,7 @@ function Cart() {
                 key={obj.id}
                 id={obj.id}
                 name={obj.name}
+                imageUrl={obj.imageUrl}
                 type={obj.type}
                 size={obj.size}
                 totalPrice={items[obj.id].totalPrice}
