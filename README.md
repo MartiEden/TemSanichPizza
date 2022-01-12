@@ -1,5 +1,7 @@
 **TemSanich PIZZA e-commerce**
 
+Visit: https://temsanich-pizza.herokuapp.com/
+
 **Stack:**
 
 - ReactJS + hooks
