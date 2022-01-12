@@ -1,6 +1,6 @@
 **TemSanich PIZZA e-commerce**
 
-Visit: https://temsanich-pizza.herokuapp.com/
+Visit my DEMO: https://temsanich-pizza.herokuapp.com/
 
 **Stack:**
 
