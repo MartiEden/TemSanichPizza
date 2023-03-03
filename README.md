@@ -11,3 +11,7 @@ Visit my DEMO: https://temsanich-pizza.herokuapp.com/
 - json-server
 - Axios
 - classnames
+
+HOW TO START
+
+yarn --> yarn run json-server --> yarn start
